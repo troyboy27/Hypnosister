@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5EED2BC219F5B5EB0072DDCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EED2BC119F5B5EB0072DDCE /* AppDelegate.swift */; };
-		5EED2BC419F5B5EB0072DDCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EED2BC319F5B5EB0072DDCE /* ViewController.swift */; };
-		5EED2BC719F5B5EB0072DDCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EED2BC519F5B5EB0072DDCE /* Main.storyboard */; };
 		5EED2BC919F5B5EB0072DDCE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EED2BC819F5B5EB0072DDCE /* Images.xcassets */; };
 		5EED2BCC19F5B5EB0072DDCE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EED2BCA19F5B5EB0072DDCE /* LaunchScreen.xib */; };
 		5EED2BD819F5B5EB0072DDCE /* HypnosisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EED2BD719F5B5EB0072DDCE /* HypnosisterTests.swift */; };
+		5EED2BE219F5B9EA0072DDCE /* HypnosisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EED2BE119F5B9EA0072DDCE /* HypnosisView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +28,12 @@
 		5EED2BBC19F5B5EB0072DDCE /* Hypnosister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hypnosister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EED2BC019F5B5EB0072DDCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EED2BC119F5B5EB0072DDCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5EED2BC319F5B5EB0072DDCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5EED2BC619F5B5EB0072DDCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EED2BC819F5B5EB0072DDCE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5EED2BCB19F5B5EB0072DDCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5EED2BD119F5B5EB0072DDCE /* HypnosisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HypnosisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EED2BD619F5B5EB0072DDCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EED2BD719F5B5EB0072DDCE /* HypnosisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypnosisterTests.swift; sourceTree = "<group>"; };
+		5EED2BE119F5B9EA0072DDCE /* HypnosisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HypnosisView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				5EED2BC119F5B5EB0072DDCE /* AppDelegate.swift */,
-				5EED2BC319F5B5EB0072DDCE /* ViewController.swift */,
-				5EED2BC519F5B5EB0072DDCE /* Main.storyboard */,
+				5EED2BE119F5B9EA0072DDCE /* HypnosisView.swift */,
 				5EED2BC819F5B5EB0072DDCE /* Images.xcassets */,
 				5EED2BCA19F5B5EB0072DDCE /* LaunchScreen.xib */,
 				5EED2BBF19F5B5EB0072DDCE /* Supporting Files */,
@@ -192,7 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EED2BC719F5B5EB0072DDCE /* Main.storyboard in Resources */,
 				5EED2BCC19F5B5EB0072DDCE /* LaunchScreen.xib in Resources */,
 				5EED2BC919F5B5EB0072DDCE /* Images.xcassets in Resources */,
 			);
@@ -212,8 +208,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EED2BC419F5B5EB0072DDCE /* ViewController.swift in Sources */,
 				5EED2BC219F5B5EB0072DDCE /* AppDelegate.swift in Sources */,
+				5EED2BE219F5B9EA0072DDCE /* HypnosisView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +232,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5EED2BC519F5B5EB0072DDCE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5EED2BC619F5B5EB0072DDCE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5EED2BCA19F5B5EB0072DDCE /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
