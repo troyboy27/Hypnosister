@@ -9,18 +9,58 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UIScrollViewDelegate {
 
     var window: UIWindow?
+    var miniMap: MiniMapView?
+    var hypnosisView: HypnosisView?
 
+    func scrollViewDidScroll(scrollView: UIScrollView!) {
+        miniMap?.updateWithScrollView(scrollView)
+        
+    }
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView!) -> UIView! {
+        return hypnosisView
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        let firstFrame = window!.bounds
-        let firstView = HypnosisView(frame: firstFrame)
-        window!.addSubview(firstView)
+        // Create CGRects for frames
+        var screenRect = window!.bounds
+        var bigRect = screenRect
+        bigRect.size.width *= 2.0
+        bigRect.size.height *= 2.0
+        
+        // Create a screen-sized scroll view and add it to the window
+        let scrollView = UIScrollView(frame: screenRect)
+        
+        scrollView.minimumZoomScale = 1.0
+        scrollView.maximumZoomScale = 2.0
+        
+        scrollView.delegate = self
+        
+        window!.addSubview(scrollView)
+        
+        // Create a super-sized hypnosis view and add it to the scroll view
+        let hypnosisView = HypnosisView(frame: bigRect)
+        
+        // Set the propertt to reference the local variable
+        self.hypnosisView = hypnosisView
+        
+        scrollView.addSubview(hypnosisView)
+        
+        
+        
+        // Tell the scroll view how big its content area is
+        scrollView.contentSize = bigRect.size
+        
+        let miniMap = MiniMapView(frame: CGRect(x: 10, y: 30, width: 75, height: 135))
+        window!.addSubview(miniMap)
+        miniMap.updateWithScrollView(scrollView)
+        self.miniMap = miniMap
         
         window!.backgroundColor = UIColor.whiteColor()
         window!.makeKeyAndVisible()
