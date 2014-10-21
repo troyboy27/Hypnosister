@@ -28,44 +28,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIScrollViewDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        // Create CGRects for frames
-        var screenRect = window!.bounds
-        var bigRect = screenRect
-        bigRect.size.width *= 2.0
-        bigRect.size.height *= 2.0
         
-        // Create a screen-sized scroll view and add it to the window
-        let scrollView = UIScrollView(frame: screenRect)
+        let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: nil)
+        application.registerUserNotificationSettings(settings)
         
-        scrollView.minimumZoomScale = 1.0
-        scrollView.maximumZoomScale = 2.0
+        // This line will generate a warning, ignore it for now
+        let hvc = HypnosisViewController()
+
+        let rvc = ReminderViewController()
         
-        scrollView.delegate = self
+        let tbc = UITabBarController()
+        tbc.viewControllers = [hvc, rvc]
         
-        window!.addSubview(scrollView)
-        
-        // Create a super-sized hypnosis view and add it to the scroll view
-        let hypnosisView = HypnosisView(frame: bigRect)
-        
-        // Set the propertt to reference the local variable
-        self.hypnosisView = hypnosisView
-        
-        scrollView.addSubview(hypnosisView)
-        
-        
-        
-        // Tell the scroll view how big its content area is
-        scrollView.contentSize = bigRect.size
-        
-        let miniMap = MiniMapView(frame: CGRect(x: 10, y: 30, width: 75, height: 135))
-        window!.addSubview(miniMap)
-        miniMap.updateWithScrollView(scrollView)
-        self.miniMap = miniMap
+        window!.rootViewController = tbc
         
         window!.backgroundColor = UIColor.whiteColor()
         window!.makeKeyAndVisible()
-        
-        
         
         return true
     }

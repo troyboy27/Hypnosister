@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E2555C719F6C2BC00D4A5CC /* HypnosisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2555C619F6C2BC00D4A5CC /* HypnosisViewController.swift */; };
+		5E2555C919F6C41000D4A5CC /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2555C819F6C41000D4A5CC /* ReminderViewController.swift */; };
+		5E2555CB19F6C4B800D4A5CC /* ReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E2555CA19F6C4B800D4A5CC /* ReminderViewController.xib */; };
 		5EED2BC219F5B5EB0072DDCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EED2BC119F5B5EB0072DDCE /* AppDelegate.swift */; };
 		5EED2BC919F5B5EB0072DDCE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EED2BC819F5B5EB0072DDCE /* Images.xcassets */; };
 		5EED2BCC19F5B5EB0072DDCE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EED2BCA19F5B5EB0072DDCE /* LaunchScreen.xib */; };
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E2555C619F6C2BC00D4A5CC /* HypnosisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HypnosisViewController.swift; path = ../HypnosisViewController.swift; sourceTree = "<group>"; };
+		5E2555C819F6C41000D4A5CC /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		5E2555CA19F6C4B800D4A5CC /* ReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderViewController.xib; sourceTree = "<group>"; };
 		5EED2BBC19F5B5EB0072DDCE /* Hypnosister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hypnosister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EED2BC019F5B5EB0072DDCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EED2BC119F5B5EB0072DDCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +83,10 @@
 		5EED2BBE19F5B5EB0072DDCE /* Hypnosister */ = {
 			isa = PBXGroup;
 			children = (
+				5E2555C619F6C2BC00D4A5CC /* HypnosisViewController.swift */,
 				5EED2BC119F5B5EB0072DDCE /* AppDelegate.swift */,
+				5E2555C819F6C41000D4A5CC /* ReminderViewController.swift */,
+				5E2555CA19F6C4B800D4A5CC /* ReminderViewController.xib */,
 				5EFD100D19F5DBB800EB8983 /* MiniMapView.swift */,
 				5EED2BE119F5B9EA0072DDCE /* HypnosisView.swift */,
 				5EED2BC819F5B5EB0072DDCE /* Images.xcassets */,
@@ -193,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EED2BCC19F5B5EB0072DDCE /* LaunchScreen.xib in Resources */,
+				5E2555CB19F6C4B800D4A5CC /* ReminderViewController.xib in Resources */,
 				5EED2BC919F5B5EB0072DDCE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +223,9 @@
 			files = (
 				5EFD100E19F5DBB800EB8983 /* MiniMapView.swift in Sources */,
 				5EED2BC219F5B5EB0072DDCE /* AppDelegate.swift in Sources */,
+				5E2555C919F6C41000D4A5CC /* ReminderViewController.swift in Sources */,
 				5EED2BE219F5B9EA0072DDCE /* HypnosisView.swift in Sources */,
+				5E2555C719F6C2BC00D4A5CC /* HypnosisViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

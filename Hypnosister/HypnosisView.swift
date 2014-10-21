@@ -33,7 +33,7 @@ class HypnosisView: UIView {
     }
     
     func timerFired(timer: NSTimer) {
-        println("pew")
+//        println("pew")
         
         //Increment the radius offset
         radiusOffset += 1.0
