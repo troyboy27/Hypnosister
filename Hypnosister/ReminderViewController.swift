@@ -33,6 +33,8 @@ class ReminderViewController: UIViewController {
         let date = datePicker.date
         println("Setting a reminder for \(date)")
         
+        //tell the system to send a notification 'banner' in this case
+        
         let note = UILocalNotification()
         note.alertBody = "Hypnotize me!"
         note.fireDate = date

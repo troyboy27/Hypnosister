@@ -22,7 +22,9 @@ class HypnosisView: UIView {
     
     //Override these two methods to set up and tear down the timer
     override func didMoveToSuperview() {
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0/30.0, target: self, selector: "timerFired:", userInfo: nil, repeats: true)
+        if timer == nil {
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0/30.0, target: self, selector: "timerFired:", userInfo: nil, repeats: true)
+        }
     }
     
     override func removeFromSuperview() {
